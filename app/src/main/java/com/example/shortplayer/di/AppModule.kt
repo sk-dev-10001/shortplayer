@@ -29,7 +29,7 @@ object AppModule {
     @Provides
     fun provideHeaderInterceptor(): Interceptor = Interceptor { chain ->
         val newRequest = chain.request().newBuilder()
-            .addHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNzFmYzYxYTU2ZWIxYzc2NzgwMjBjMmJjZDBkMThhNyIsIm5iZiI6MTc0NTkyMDU0My43NjEsInN1YiI6IjY4MTBhMjFmMTYzNWQyOTE4YzgxODM0YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0gPrTeDpwNfx0IjxOwtyDbjmsBdU24i9nLuANtQXAyI")
+            .addHeader("Authorization", "Bearer ")
             .addHeader("accept", "application/json")
             .build()
         chain.proceed(newRequest)
